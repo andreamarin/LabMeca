@@ -1,0 +1,316 @@
+robotica@labcl02:~/flamPM$ git clone https://github.com/andreamarin/LabMeca
+Cloning into 'LabMeca'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+robotica@labcl02:~/flamPM$ ls
+LabMeca
+robotica@labcl02:~/flamPM$ cd LabMeca
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_11
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_12
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_11/Dir_111
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_11/Dir_112
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_12/Dir_121
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_12/Dir_121/Dir_1211robotica@labcl02:~/flamPM/LabMeca$ touch Practica1/Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111
+touch: cannot touch 'Practica1/Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111': No such file or directory
+robotica@labcl02:~/flamPM/LabMeca$ mkdir Practica1/Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111
+robotica@labcl02:~/flamPM/LabMeca$ touch Practica1/Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111
+robotica@labcl02:~/flamPM/LabMeca$ touch Practica1/Dir_1/Dir_12/Dir_121/arch_121robotica@labcl02:~/flamPM/LabMeca$ touch Practica1/Dir_1/Dir_11/arch_11
+robotica@labcl02:~/flamPM/LabMeca$ touch Practica1/Dir_1/Dir_11/Dir_111/arch_111robotica@labcl02:~/flamPM/LabMeca$ touch Practica1/Dir_1/Dir_11/Dir_112/arch_112robotica@labcl02:~/flamPM/LabMeca$ cd Practica1
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ ls -aR
+.:
+.  ..  Dir_1
+
+./Dir_1:
+.  ..  Dir_11  Dir_12
+
+./Dir_1/Dir_11:
+.  ..  arch_11  Dir_111  Dir_112
+
+./Dir_1/Dir_11/Dir_111:
+.  ..  arch_111
+
+./Dir_1/Dir_11/Dir_112:
+.  ..  arch_112
+
+./Dir_1/Dir_12:
+.  ..  Dir_121
+
+./Dir_1/Dir_12/Dir_121:
+.  ..  arch_121  Dir_1211
+
+./Dir_1/Dir_12/Dir_121/Dir_1211:
+.  ..  Dir_12111
+
+./Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111:
+.  ..  arch_12111
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ cp Dir_1 Dir_1_cp
+cp: omitting directory 'Dir_1'
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ cp -r Dir_1 Dir_1_cp
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ mv -r Dir_1_cp Copia_dir
+mv: invalid option -- 'r'
+Try 'mv --help' for more information.
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ mv Dir_1_cp Copia_dir
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ ls
+Copia_dir  Dir_1
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ ls -aR Copia_dir
+Copia_dir:
+.  ..  Dir_11  Dir_12
+
+Copia_dir/Dir_11:
+.  ..  arch_11  Dir_111  Dir_112
+
+Copia_dir/Dir_11/Dir_111:
+.  ..  arch_111
+
+Copia_dir/Dir_11/Dir_112:
+.  ..  arch_112
+
+Copia_dir/Dir_12:
+.  ..  Dir_121
+
+Copia_dir/Dir_12/Dir_121:
+.  ..  arch_121  Dir_1211
+
+Copia_dir/Dir_12/Dir_121/Dir_1211:
+.  ..  Dir_12111
+
+Copia_dir/Dir_12/Dir_121/Dir_1211/Dir_12111:
+.  ..  arch_12111
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ cat /opt/arduino-1.8.3/examples/*/*/*.ino > example_file.txt
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ head example_file.txt 
+/*
+  AnalogReadSerial
+  Reads an analog input on pin 0, prints the result to the serial monitor.
+  Graphical representation is available using serial plotter (Tools > Serial Plotter menu)
+  Attach the center pin of a potentiometer to pin A0, and the outside pins to +5V and ground.
+
+  This example code is in the public domain.
+*/
+
+// the setup routine runs once when you press reset:
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ tail example_file.txt
+    // anything else we will return STK_UNKNOWN
+    default:
+      error++;
+      if (CRC_EOP == getch())
+        SERIAL.print((char)STK_UNKNOWN);
+      else
+        SERIAL.print((char)STK_NOSYNC);
+  }
+}
+
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ cat example_file.txt | grep arduino  the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
+  the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
+ http://www.arduino.cc/en/Tutorial/BlinkWithoutDelay
+ http://www.arduino.cc/en/Tutorial/Button
+ http://www.arduino.cc/en/Tutorial/Debounce
+ http://www.arduino.cc/en/Tutorial/InputPullupSerial
+ http://www.arduino.cc/en/Tutorial/ButtonStateChange
+ http://www.arduino.cc/en/Tutorial/Tone3
+ http://www.arduino.cc/en/Tutorial/Tone
+ http://www.arduino.cc/en/Tutorial/Tone4
+ http://www.arduino.cc/en/Tutorial/Tone2
+ http://www.arduino.cc/en/Tutorial/AnalogInput
+ http://www.arduino.cc/en/Tutorial/Calibration
+ http://www.arduino.cc/en/Tutorial/Fading
+  http://www.arduino.cc/en/Tutorial/Smoothing
+ http://www.arduino.cc/en/Tutorial/Dimmer
+ http://www.arduino.cc/en/Tutorial/Graph
+ http://www.arduino.cc/en/Tutorial/Midi
+ http://www.arduino.cc/en/Tutorial/PhysicalPixel
+ http://www.arduino.cc/en/Tutorial/SerialCallResponseASCII
+ http://www.arduino.cc/en/Tutorial/SerialCallResponse
+ http://www.arduino.cc/en/Tutorial/SerialEvent
+ http://www.arduino.cc/en/Tutorial/VirtualColorMixer
+ http://www.arduino.cc/en/Tutorial/Array
+ http://www.arduino.cc/en/Tutorial/ForLoop
+http://www.arduino.cc/en/Tutorial/IfStatement
+ http://www.arduino.cc/en/Tutorial/SwitchCase2
+ http://www.arduino.cc/en/Tutorial/SwitchCase
+ http://www.arduino.cc/en/Tutorial/WhileLoop
+ http://www.arduino.cc/en/Tutorial/ADXL3xx
+   http://www.arduino.cc/en/Tutorial/Knock
+   http://www.arduino.cc/en/Tutorial/Memsic2125
+   http://www.arduino.cc/en/Tutorial/Ping
+ http://www.arduino.cc/en/Tutorial/BarGraph
+ http://www.arduino.cc/en/Tutorial/RowColumnScanning
+ see also http://www.tigoe.net/pcomp/code/category/arduinowiring/514 for more
+ http://www.arduino.cc/en/Tutorial/StringAdditionOperator
+ http://www.arduino.cc/en/Tutorial/StringAppendOperator
+ http://www.arduino.cc/en/Tutorial/StringCaseChanges
+ http://www.arduino.cc/en/Tutorial/StringCharacters
+ http://www.arduino.cc/en/Tutorial/StringComparisonOperators
+ http://www.arduino.cc/en/Tutorial/StringConstructors
+ http://www.arduino.cc/en/Tutorial/StringIndexOf
+ http://www.arduino.cc/en/Tutorial/StringLengthTrim
+ http://www.arduino.cc/en/Tutorial/StringLengthTrim
+ http://www.arduino.cc/en/Tutorial/StringReplace
+ http://www.arduino.cc/en/Tutorial/StringStartsWithEndsWith
+ http://www.arduino.cc/en/Tutorial/StringSubstring
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/playground/Main/CapacitiveSensor
+ http://www.arduino.cc/starterKit
+ http://www.arduino.cc/starterKit
+  logo = loadImage("http://www.arduino.cc/arduino_logo.png");
+ http://www.arduino.cc/starterKit
+// using the following arduino pins:
+  // which for many arduino's is not the SS pin.
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ cat example_file.txt | count arduino
+No command 'count' found, did you mean:
+ Command 'mount' from package 'mount' (main)
+ Command 'ocount' from package 'oprofile' (universe)
+count: command not found
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ cat example_file.txt | grep -c arduino
+66
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ echo **/arch_12111
+**/arch_12111
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ man rm
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ 
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ find . arch_12111
+.
+./Dir_1
+./Dir_1/Dir_12
+./Dir_1/Dir_12/Dir_121
+./Dir_1/Dir_12/Dir_121/Dir_1211
+./Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111
+./Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111
+./Dir_1/Dir_12/Dir_121/arch_121
+./Dir_1/Dir_11
+./Dir_1/Dir_11/Dir_111
+./Dir_1/Dir_11/Dir_111/arch_111
+./Dir_1/Dir_11/arch_11
+./Dir_1/Dir_11/Dir_112
+./Dir_1/Dir_11/Dir_112/arch_112
+./example_file.txt
+./Copia_dir
+./Copia_dir/Dir_12
+./Copia_dir/Dir_12/Dir_121
+./Copia_dir/Dir_12/Dir_121/Dir_1211
+./Copia_dir/Dir_12/Dir_121/Dir_1211/Dir_12111
+./Copia_dir/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111
+./Copia_dir/Dir_12/Dir_121/arch_121
+./Copia_dir/Dir_11
+./Copia_dir/Dir_11/Dir_111
+./Copia_dir/Dir_11/Dir_111/arch_111
+./Copia_dir/Dir_11/arch_11
+./Copia_dir/Dir_11/Dir_112
+./Copia_dir/Dir_11/Dir_112/arch_112
+find: ‘arch_12111’: No such file or directory
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ man find
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ find . -name arch_12111
+./Dir_1/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111
+./Copia_dir/Dir_12/Dir_121/Dir_1211/Dir_12111/arch_12111
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ find . -name arch_12111 -delete
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ find . -name arch_12111
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ find . -name Dir_12111 -delete
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ find . -name Dir_12111 
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ top Arduino
+top: unknown option 'A'
+top - 10:02:23 up 23:01,  1 user,  load average: 0.10, 0.16, 0.13
+Tasks: 203 total,   2 running, 201 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5.7 us,  3.3 sy,  0.0 ni, 91.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  3713096 total,   228432 free,  1285452 used,  2199212 buff/cache
+KiB Swap:  3998716 total,  3996596 free,     2120 used.  1872620 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                   
+ 7206 robotica  20   0 2021352 169788  58792 R  13.3  4.6   0:47.32 gnome-shell               
+ 7024 robotica  20   0  258156  41664  32596 S   3.3  1.1   0:44.34 Xorg                      
+ 7371 root      20   0       0      0      0 S   3.3  0.0   0:00.52 kworker/2:0               
+ 9480 robotica  20   0   43024   3848   3260 R   3.3  0.1   0:00.18 top                       
+    1 root      20   0  119696   5912   4048 S   0.0  0.2   0:02.05 systemd                   
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd                  
+    3 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0               
+    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H              
+    7 root      20   0       0      0      0 S   0.0  0.0   0:26.08 rcu_sched                top - 10:02:29 up 23:01,  1 user,  load average: 0.09, 0.16, 0.13
+Tasks: 203 total,   1 running, 202 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.8 us,  0.7 sy,  0.0 ni, 96.3 id,  0.2 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  3713096 total,   260824 free,  1286436 used,  2165836 buff/cache
+KiB Swap:  3998716 total,  3996596 free,     2120 used.  1905004 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                  
+ 7466 robotica  20   0  620888  36020  27660 S   2.3  1.0   0:07.88 gnome-terminal-          
+ 7024 robotica  20   0  260424  41664  32596 S   1.7  1.1   0:44.54 Xorg                     
+ 7206 robotica  20   0 2019804 169888  58792 S   1.3  4.6   0:47.50 gnome-shell              
+    7 root      20   0       0      0      0 S   0.3  0.0   0:26.09 rcu_sched                
+ 7982 robotica  20   0 1520200 108380  79476 S   0.3  2.9   0:05.44 WebExtensions            
+ 9067 robotica  20   0 1693020 186976 108200 S   0.3  5.0   0:34.95 Web Content              
+    1 root      20   0  119696   5912   4048 S   0.0  0.2   0:02.05 systemd                  
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd                 
+    3 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0              
+    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H             
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh                   
+    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0              
+   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.21 watchdog/0               
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.22 watchdog/1               
+   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/1              
+   13 root      20   0       0      0      0 S   0.0  0.0   0:00.06 ksoftirqd/1              
+   15 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H             
+   16 root      rt   0       0      0      0 S   0.0  0.0   0:00.22 watchdog/2               
+   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/2              
+   18 root      20   0       0      0      0 S   0.0  0.0   0:00.11 ksoftirqd/2              
+   20 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H             
+   21 root      rt   0       0      0      0 S   0.0  0.0   0:00.21 watchdog/3               
+   22 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/3              
+   23 root      20   0       0      0      0 S   0.0  0.0   0:00.04 ksoftirqd/3              
+   25 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:0H             
+   26 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kdevtmpfs                
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ top
+
+top - 10:03:20 up 23:02,  1 user,  load average: 0.47, 0.28, 0.18
+Tasks: 209 total,   1 running, 208 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.2 sy,  0.0 ni, 98.8 id,  0.3 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  3713096 total,   169856 free,  1402012 used,  2141228 buff/cache
+KiB Swap:  3998716 total,  3996636 free,     2080 used.  1772060 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                  
+ 7466 robotica  20   0  620888  36020  27660 S   1.7  1.0   0:08.09 gnome-terminal-          
+ 7024 robotica  20   0  267124  44588  35032 S   1.3  1.2   0:46.17 Xorg                     
+ 7206 robotica  20   0 2024080 173408  58796 S   1.0  4.7   0:49.79 gnome-shell              
+ 6745 root      20   0       0      0      0 S   0.3  0.0   0:00.98 kworker/3:1              
+ 7133 robotica  20   0  206864   4920   4452 S   0.3  0.1   0:00.68 at-spi2-registr          
+ 7821 robotica  20   0 2178204 392456 135984 S   0.3 10.6   2:11.45 firefox                  
+ 7982 robotica  20   0 1520200 108380  79476 S   0.3  2.9   0:05.55 WebExtensions            
+ 9067 robotica  20   0 1693020 188576 108116 S   0.3  5.1   0:36.61 Web Content              
+ 9584 robotica  20   0 4256176 103068  36108 S   0.3  2.8   0:03.30 java                     
+ 9681 robotica  20   0   43024   3880   3264 R   0.3  0.1   0:00.05 top                      
+    1 root      20   0  119696   5912   4048 S   0.0  0.2   0:02.06 systemd                  
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd                 
+    3 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0              
+    5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H             
+    7 root      20   0       0      0      0 S   0.0  0.0   0:26.14 rcu_sched                
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh                   
+    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0              
+   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.22 watchdog/0               
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.22 watchdog/1               
+   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/1              
+   13 root      20   0       0      0      0 S   0.0  0.0   0:00.06 ksoftirqd/1              
+   15 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H             
+   16 root      rt   0       0      0      0 S   0.0  0.0   0:00.22 watchdog/2               
+   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/2              
+   18 root      20   0       0      0      0 S   0.0  0.0   0:00.11 ksoftirqd/2              
+   20 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H             
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ ps
+  PID TTY          TIME CMD
+ 7548 pts/0    00:00:00 bash
+ 9682 pts/0    00:00:00 ps
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ arduino
+^Crobotica@labcl02:~/flamPM/LabMeca/Practica1$ arduino&
+[1] 9914
+robotica@labcl02:~/flamPM/LabMeca/Practica1$ ps
+  PID TTY          TIME CMD
+ 7548 pts/0    00:00:00 bash
+ 9914 pts/0    00:00:00 arduino
+ 9918 pts/0    00:00:02 java
+ 9946 pts/0    00:00:00 ps
