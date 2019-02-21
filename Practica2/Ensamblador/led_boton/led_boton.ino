@@ -1,10 +1,10 @@
 int led = 13;
 int boton = 31;
 int flag = 0;
+
 void setup() {
   pinMode(led, OUTPUT);
   pinMode(boton, INPUT);
-  Serial.begin(9600);
 }
 
 void loop() {
