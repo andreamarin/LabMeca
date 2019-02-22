@@ -34,6 +34,6 @@ ISR(TIMER1_OVF_vect){
     "end:"
    );
    
-  TCNT1H = 0xF0;
-  TCNT1L = 0x60;
+  TCNT1H = 0xE0;
+  TCNT1L = 0xC0;
 }
