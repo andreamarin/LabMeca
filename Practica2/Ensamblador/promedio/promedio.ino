@@ -1,4 +1,5 @@
 int sum = 0;
+
 void setup() {
   Serial.begin(9600);
 }
@@ -13,5 +14,5 @@ void loop() {
   double avg = sum/n;
 
   Serial.println("El promedio es: ");
-  Serial.print(avg);
+  Serial.print((String)avg);
 }
